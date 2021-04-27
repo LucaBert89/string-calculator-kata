@@ -1,0 +1,26 @@
+{
+  "name": "string-calculator-kata",
+  "version": "1.0.0",
+  "description": "The following is a TDD Kata, an exercise in coding, refactoring and test-first.",
+  "main": "script.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucaBert89/string-calculator-kata.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucaBert89/string-calculator-kata/issues"
+  },
+  "homepage": "https://github.com/LucaBert89/string-calculator-kata#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
+}
