@@ -21,4 +21,7 @@ describe('step2', function() {
     it('should return 3 when infinite numbers added inside the argument string', function() {
       assert.equal(stringCalculator.add("1,1,1"),3);
     })
+    it('should return 5', function() {
+        assert.equal(stringCalculator.add("1,1,1,1,1"),5);
+    })
 })
