@@ -25,15 +25,13 @@ function add(stringNumbers) {
 }
 
 function oneArgument(stringNumbers) {
-    // if the string value is equal to "" the stringNumbers is equal to 0
-    if(stringNumbers === "") {
-        stringNumbers = 0;
-        sum = stringNumbers;
+      // if the string value is equal to "" the stringNumbers is equal to 0
+      if(stringNumbers === "") {
+        return 0;
     } else {
     // if there is only one number passed as argument than stringNumbers is equal converted into a number
-        sum = parseInt(stringNumbers);
+        return parseInt(stringNumbers);
     }
-    return sum;
 }
 
 module.exports = {add};
