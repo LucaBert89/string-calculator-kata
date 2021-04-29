@@ -27,7 +27,7 @@ describe('step2', function() {
 })
 
 describe('step3', function() {
-    it('should return 6', function() {
+    it('should return 6 if \n separator is used instead of ,', function() {
       assert.equal(stringCalculator.add("1\n2,3"),6);
     })
 })

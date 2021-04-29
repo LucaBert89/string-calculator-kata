@@ -16,11 +16,10 @@ function add(stringNumbers) {
     } else {
     //case there are more than one number as string inside the string argument like "1,2"
     //here the stringNumbers string is splitted into separate array value
-        const splittedArgument = stringNumbers.split(",");
+        const splittedArgument = stringNumbers.split(/[,\n]/);
         // here all the value founded into the splittedArgument array are summed
         return splittedArgument.reduce((total, currentValue) => {
             return parseInt(total) + parseInt(currentValue);
-
         })
     }
 }
