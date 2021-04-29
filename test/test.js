@@ -25,3 +25,9 @@ describe('step2', function() {
         assert.equal(stringCalculator.add("1,1,1,1,1"),5);
     })
 })
+
+describe('step3', function() {
+    it('should return 6', function() {
+      assert.equal(stringCalculator.add("1\n2,3"),6);
+    })
+})
