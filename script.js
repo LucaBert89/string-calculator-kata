@@ -10,18 +10,17 @@ C.
  * @param {string} stringNumbers
  */
 function add(stringNumbers) {
-    let sum;
     // case there is only one number as string inside the string argument like "" or "1" 
     if(stringNumbers.length <= 1) {
-       sum = oneArgument(stringNumbers);
+       return oneArgument(stringNumbers);
     } else {
     //case there are more than one number as string inside the string argument like "1,2"
-        let splittedArgument = string.split(",",2);
-        sum = splittedArgument.reduce((total, currentValue) => {
+        const splittedArgument = stringNumbers.split(",",2);
+        return splittedArgument.reduce((total, currentValue) => {
             return parseInt(total) + parseInt(currentValue);
+
         })
     }
-    return sum;
 }
 
 function oneArgument(stringNumbers) {
