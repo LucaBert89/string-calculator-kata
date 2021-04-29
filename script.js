@@ -31,6 +31,6 @@ function oneArgument(stringNumbers) {
     // if there is only one number passed as argument than stringNumbers is equal converted into a number
         return parseInt(stringNumbers);
     }
-}
+}   
 
 module.exports = {add};

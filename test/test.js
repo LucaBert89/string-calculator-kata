@@ -12,4 +12,7 @@ describe('step1', function() {
     it('should return the sum of the number passed as argument, here 3', function() {
         assert.equal(stringCalculator.add("1,2"),3);
     })
+    it('should not return 3', function() {
+        assert.notEqual(stringCalculator.add("1,1"),3);
+    })
 })
