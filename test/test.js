@@ -16,3 +16,9 @@ describe('step1', function() {
         assert.notEqual(stringCalculator.add("1,1"),3);
     })
 })
+
+describe('step2', function() {
+    it('should return 3 when infinite numbers added inside the argument string', function() {
+      assert.equal(stringCalculator.add("1,1,1"),3);
+    })
+})
