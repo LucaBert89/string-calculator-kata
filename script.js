@@ -36,4 +36,4 @@ function oneArgument(stringNumbers) {
     return sum;
 }
 
-console.log(add("1,2"));
+module.exports = {add};
