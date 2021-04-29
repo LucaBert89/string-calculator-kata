@@ -31,3 +31,9 @@ describe('step3', function() {
       assert.equal(stringCalculator.add("1\n2,3"),6);
     })
 })
+
+describe('step4', function() {
+    it('should return 3 if \\[delimiter]\n[numbers...] is used', function() {
+      assert.equal(stringCalculator.add("//;\n1,2"),3);
+    })
+})
