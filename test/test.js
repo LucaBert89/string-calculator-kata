@@ -34,6 +34,6 @@ describe('step3', function() {
 
 describe('step4', function() {
     it('should return 3 if \\[delimiter]\n[numbers...] is used', function() {
-      assert.equal(stringCalculator.add("//;\n1,2"),3);
+      assert.equal(stringCalculator.add("//;\n1;2"),3);
     })
 })

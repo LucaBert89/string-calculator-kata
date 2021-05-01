@@ -15,11 +15,13 @@ function add(stringNumbers) {
        return oneArgument(stringNumbers);
     } else {
     //case there are more than one number as string inside the string argument like "1,2"
-    //here the stringNumbers string is splitted into separate array value
-        const splittedArgument = stringNumbers.split(/[,\n]/);
+    //here the stringNumbers string is splitted into separate array value based on the result of changeDelimeter func
+    const splittedArgument = changeDelimeter(stringNumbers);
+        
         // here all the value founded into the splittedArgument array are summed
         return splittedArgument.reduce((total, currentValue) => {
             return parseInt(total) + parseInt(currentValue);
+
         })
     }
 }
@@ -33,5 +35,17 @@ function oneArgument(stringNumbers) {
         return parseInt(stringNumbers);
     }
 }   
+
+function changeDelimeter(stringNumbers){
+    // if stringNumbers start with "//" than take the delimeter after them
+    if(stringNumbers.substring(0,2) === "//") {
+        const delimeter = stringNumbers.charAt(2);
+        // return the string, starting from position 4 (ex.1;2), and split by delimeter selected
+        return stringNumbers.substring(4).split(delimeter);
+    } else {
+        // in the other cases the delimeters are , and \n and the split accept this regex
+        return stringNumbers.split(/[,\n]/)
+    }
+}
 
 module.exports = {add};
