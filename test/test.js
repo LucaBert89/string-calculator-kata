@@ -37,3 +37,9 @@ describe('step4', function() {
       assert.equal(stringCalculator.add("//;\n1;2"),3);
     })
 })
+
+describe('step5', function() {
+  it('should throw an exception with the message "negatives not allowed: [negative number list]"', function() {
+    expect(() => stringCalculator.add("1,4,-1")).to.throw(Error, "negatives not allowed:-1");
+  })
+})
