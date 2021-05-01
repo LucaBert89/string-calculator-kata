@@ -32,7 +32,7 @@ function checkAndSum(stringNumbers) {
         } else {
             // if there aren't negative values, here all the values founded into the splittedArgument array are summed
             return splittedArgument.map(e => parseInt(e)).reduce((total, currentValue) => {
-                //if the currentValue is higher than 1000, skip and return the accumulator, else sum
+                //if the currentValue is bigger than 1000, skip and return the accumulator, else sum
                 return currentValue > 1000 ? total : total + currentValue;
             })
         }

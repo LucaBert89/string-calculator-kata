@@ -13,9 +13,6 @@ describe('step1', function() {
     it('should return the sum of the number passed as argument, here 3', function() {
         assert.equal(stringCalculator.add("1,2"),3);
     })
-    it('should not return 3', function() {
-        assert.notEqual(stringCalculator.add("1,1"),3);
-    })
 })
 
 describe('step2', function() {
@@ -34,7 +31,7 @@ describe('step3', function() {
 })
 
 describe('step4', function() {
-    it('should return 3 if \\[delimiter]\n[numbers...] is used', function() {
+    it('should return 3 if //[delimiter]\n[numbers...] is used', function() {
       assert.equal(stringCalculator.add("//;\n1;2"),3);
     })
 })
