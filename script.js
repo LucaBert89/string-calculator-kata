@@ -17,12 +17,15 @@ function add(stringNumbers) {
     //case there are more than one number as string inside the string argument like "1,2"
     //here the stringNumbers string is splitted into separate array value based on the result of changeDelimeter func
     const splittedArgument = changeDelimeter(stringNumbers);
-        
-        // here all the value founded into the splittedArgument array are summed
-        return splittedArgument.reduce((total, currentValue) => {
-            return parseInt(total) + parseInt(currentValue);
-
-        })
+    const negativeArrayNumbers = splittedArgument.filter(e=>e < 0);
+        if(negativeArrayNumbers.length > 0) {
+            throw new Error(`negatives not allowed:${negativeArrayNumbers.toString()}`);
+        } else {
+            // here all the value founded into the splittedArgument array are summed
+            return splittedArgument.reduce((total, currentValue) => {
+                return parseInt(total) + parseInt(currentValue);
+            })
+        }
     }
 }
 

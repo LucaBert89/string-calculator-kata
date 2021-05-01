@@ -1,6 +1,7 @@
 var stringCalculator = require("../script");
 
 var assert = require('chai').assert;
+var expect = require('chai').expect;
 
 describe('step1', function() {
     it('should return 0 if empty argument', function() {
