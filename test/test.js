@@ -44,3 +44,9 @@ describe('step5', function() {
     expect(() => stringCalculator.add("1,4,-1")).to.throw(Error, "negatives not allowed:-1");
   })
 })
+
+describe('step6', function() {
+  it('should return 2, if there are numbers > 1000 they will be skipped"', function() {
+    assert.equal(stringCalculator.add("2,1000"),2);
+  })
+})
