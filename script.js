@@ -40,7 +40,7 @@ function checkAndSum(stringNumbers) {
 
 function changeDelimeter(stringNumbers){
     // if stringNumbers start with "//" than take the delimeter after them
-    if(stringNumbers.substring(0,2) === "//") {
+    if(stringNumbers.substring(0,2) === "//" && stringNumbers.substring(3,4) === "\n") {
         const delimeter = stringNumbers.charAt(2);
         // return the string, starting from position 4 (ex.1;2), and split by delimeter selected
         return stringNumbers.substring(4).split(delimeter);
