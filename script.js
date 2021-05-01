@@ -1,43 +1,41 @@
-/* STEP1: writing a function to sum the numbers inside the string argument
-
-A. i'm going to use SPLIT to remove the comma and separate the string-numbers into 3 different strings inside the array
-B. i'm going to reduce combined with parseInt to convert the strings into numbers and to sum them
-
-C. 
+/*
+CHOOSEN METHOD:
+A. i'm going to use SPLIT to remove the delimeters and separate the string-numbers into strings inside the array
+B. i'm going to use reduce combined with parseInt to convert the strings into numbers and to sum them
  */
 
 /**
  * @param {string} stringNumbers
  */
 function add(stringNumbers) {
-    // case there is only one number as string inside the string argument like "" or "1" 
-    if(stringNumbers.length <= 1) {
-       return oneArgument(stringNumbers);
-    } else {
-    //case there are more than one number as string inside the string argument like "1,2"
-    //here the stringNumbers string is splitted into separate array value based on the result of changeDelimeter func
+    /*two cases based on stringNumbers length:
+    1. if there's one number or less like "" or "1": call oneArgument function 
+    2. else: call checkAndSum to check different conditions and sum the values
+    */
+    return stringNumbers.length <= 1 ? oneArgument(stringNumbers) : checkAndSum(stringNumbers); 
+}
+
+function oneArgument(stringNumbers) {
+      // if the string value is equal to "" the stringNumbers is equal to 0 else to the number found
+      return stringNumbers === "" ? 0 : parseInt(stringNumbers) 
+}   
+
+function checkAndSum(stringNumbers) {
+    //splittedArgument is an array of the splitted stringNumbers values based on the result of changeDelimeter func
     const splittedArgument = changeDelimeter(stringNumbers);
+    // here the negativeArrayNumbers take all the negative numbers from splittedArgument
     const negativeArrayNumbers = splittedArgument.filter(e=>e < 0);
+    //if there is some negative value throw error
+
         if(negativeArrayNumbers.length > 0) {
             throw new Error(`negatives not allowed:${negativeArrayNumbers.toString()}`);
         } else {
-            // here all the value founded into the splittedArgument array are summed
+            // if there aren't negative values, here all the values founded into the splittedArgument array are summed
             return splittedArgument.reduce((total, currentValue) => {
                 return parseInt(total) + parseInt(currentValue);
             })
         }
-    }
 }
-
-function oneArgument(stringNumbers) {
-      // if the string value is equal to "" the stringNumbers is equal to 0
-      if(stringNumbers === "") {
-        return 0;
-    } else {
-    // if there is only one number passed as argument than stringNumbers is equal converted into a number
-        return parseInt(stringNumbers);
-    }
-}   
 
 function changeDelimeter(stringNumbers){
     // if stringNumbers start with "//" than take the delimeter after them
