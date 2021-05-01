@@ -31,8 +31,9 @@ function checkAndSum(stringNumbers) {
             throw new Error(`negatives not allowed:${negativeArrayNumbers.toString()}`);
         } else {
             // if there aren't negative values, here all the values founded into the splittedArgument array are summed
-            return splittedArgument.reduce((total, currentValue) => {
-                return parseInt(total) + parseInt(currentValue);
+            return splittedArgument.map(e => parseInt(e)).reduce((total, currentValue) => {
+                //if the currentValue is higher than 1000, skip and return the accumulator, else sum
+                return currentValue > 1000 ? total : total + currentValue;
             })
         }
 }
@@ -45,7 +46,7 @@ function changeDelimeter(stringNumbers){
         return stringNumbers.substring(4).split(delimeter);
     } else {
         // in the other cases the delimeters are , and \n and the split accept this regex
-        return stringNumbers.split(/[,\n]/)
+        return stringNumbers.split(/[,\n]/);
     }
 }
 

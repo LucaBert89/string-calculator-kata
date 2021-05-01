@@ -47,6 +47,6 @@ describe('step5', function() {
 
 describe('step6', function() {
   it('should return 2, if there are numbers > 1000 they will be skipped"', function() {
-    assert.equal(stringCalculator.add("2,1000"),2);
+    assert.equal(stringCalculator.add("2,1001"),2);
   })
 })
