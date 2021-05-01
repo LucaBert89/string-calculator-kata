@@ -16,7 +16,7 @@ describe('step1', function() {
 })
 
 describe('step2', function() {
-    it('should return 3 when infinite numbers added inside the argument string', function() {
+    it('should return 3 when more than 2 numbers added inside the argument string', function() {
       assert.equal(stringCalculator.add("1,1,1"),3);
     })
     it('should return 5', function() {
@@ -37,7 +37,7 @@ describe('step4', function() {
 })
 
 describe('step5', function() {
-  it('should throw an exception with the message "negatives not allowed: [negative number list]"', function() {
+  it('should throw an exception with the message "negatives not allowed: [negative number]"', function() {
     expect(() => stringCalculator.add("1,4,-1")).to.throw(Error, "negatives not allowed:-1");
   })
 })

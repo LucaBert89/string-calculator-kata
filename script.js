@@ -1,5 +1,5 @@
 /*
-CHOOSEN METHOD:
+CHOSEN METHOD:
 A. i'm going to use SPLIT to remove the delimeters and separate the string-numbers into strings inside the array
 B. i'm going to use reduce combined with parseInt to convert the strings into numbers and to sum them
  */
