@@ -1,4 +1,4 @@
-var stringCalculator = require("../script");
+var stringCalculator = require("../calculatorString");
 
 var assert = require('chai').assert;
 var expect = require('chai').expect;
