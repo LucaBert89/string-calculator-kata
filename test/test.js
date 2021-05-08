@@ -17,10 +17,10 @@ describe('step1', function() {
 
 describe('step2', function() {
     it('should return 3 when more than 2 numbers added inside the argument string', function() {
-      assert.equal(stringCalculator.add("1,1,1"),3);
+      assert.equal(stringCalculator.add("1,2,3"),6);
     })
     it('should return 5', function() {
-        assert.equal(stringCalculator.add("1,1,1,1,1"),5);
+        assert.equal(stringCalculator.add("1,2,3,4,5"),15);
     })
 })
 
@@ -45,5 +45,12 @@ describe('step5', function() {
 describe('step6', function() {
   it('should return 2, if there are numbers > 1000 they will be skipped"', function() {
     assert.equal(stringCalculator.add("2,1001"),2);
+  })
+
+})
+
+describe('step7', function() {
+  it('should return 11, skipping the repetitive numbers', function() {
+    assert.equal(stringCalculator.add("2,6,2,3,2"),11);
   })
 })
